@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/parent_layout"
+    android:layout_marginTop="20dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/image"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
     
     <TextView
         android:layout_width="wrap_content"
@@ -17,5 +22,14 @@
         android:textColor="#000"
         android:layout_centerVertical="true"
         android:layout_marginLeft="30dp"
-        android:textSize="17sp"/>
+        android:textSize="32sp"
+        android:layout_marginBottom="16dp"
+        android:weightSum="100"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#333"/>
+
 </RelativeLayout>
