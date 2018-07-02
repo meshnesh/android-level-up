@@ -7,7 +7,7 @@ public class GithubService {
 
     private Retrofit retrofit = null;
 
-    public GithubUsersApi getAPI() {
+    public GithubApi getAPI() {
         String BASE_URL = "https://api.github.com/";
 
         if (retrofit == null) {
@@ -18,6 +18,6 @@ public class GithubService {
                     .build();
         }
 
-        return retrofit.create(GithubUsersApi.class);
+        return retrofit.create(GithubApi.class);
     }
 }
