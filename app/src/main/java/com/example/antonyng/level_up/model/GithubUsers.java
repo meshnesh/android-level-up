@@ -4,9 +4,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class GithubUsers {
 
+<<<<<<< HEAD
     @SerializedName("id")
     private String id;
 
+=======
+>>>>>>> [Feature] Create Model directory to user modela classes
     @SerializedName("name")
     private String name;
 
@@ -19,10 +22,13 @@ public class GithubUsers {
     @SerializedName("bio")
     private String bio;
 
+<<<<<<< HEAD
     public String getId() {
         return id;
     }
 
+=======
+>>>>>>> [Feature] Create Model directory to user modela classes
     public String getName() {
         return name;
     }
