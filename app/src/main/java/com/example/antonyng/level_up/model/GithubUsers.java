@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class GithubUsers {
 
+    @SerializedName("id")
+    private String id;
+
     @SerializedName("name")
     private String name;
 
@@ -15,6 +18,10 @@ public class GithubUsers {
 
     @SerializedName("bio")
     private String bio;
+
+    public String getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
