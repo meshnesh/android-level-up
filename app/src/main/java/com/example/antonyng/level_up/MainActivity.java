@@ -9,11 +9,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+<<<<<<< HEAD
 
 import com.example.antonyng.level_up.model.GithubUsers;
+=======
+>>>>>>> [Chore] Remove unused imports
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
