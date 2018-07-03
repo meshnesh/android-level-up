@@ -11,6 +11,7 @@ public class GithubService {
 <<<<<<< HEAD
     public GithubApi getAPI() {
         String BASE_URL = "https://api.github.com/v3/";
+<<<<<<< HEAD
 =======
     public GithubUsersApi getAPI() {
 =======
@@ -18,6 +19,8 @@ public class GithubService {
 >>>>>>> [Feature] Update endpoint for accesing multiple users and single user by username
         String BASE_URL = "https://api.github.com/";
 >>>>>>> [Feature] Create 'GithubService' to handle api base URL && 'GithubUsersApi' to handle HTTP methods
+=======
+>>>>>>> [Chore] Update API url for github
 
         if (retrofit == null) {
             retrofit = new Retrofit
