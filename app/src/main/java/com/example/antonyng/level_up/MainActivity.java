@@ -10,7 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.antonyng.level_up.model.GithubUsers;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
@@ -62,5 +67,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager( this));
     }
+
+    public void usersReady(List<GithubUsers> result) {
+    }
+
 
 }
