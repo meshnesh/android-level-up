@@ -5,17 +5,10 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class GithubUsersResponse {
-    @SerializedName("messages")
-    private List<String> messages;
+    @SerializedName("items")
+    public List<GithubUsers> users;
 
-    @SerializedName("result")
-    private List<GithubUsers> result;
-
-    public List<GithubUsers> getResult() {
-        return result;
-    }
-
-    public List<String> getMessages() {
-        return messages;
+    public List<GithubUsers> getUsers() {
+        return users;
     }
 }
