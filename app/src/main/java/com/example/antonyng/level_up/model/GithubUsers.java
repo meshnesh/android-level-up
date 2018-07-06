@@ -6,6 +6,7 @@ public class GithubUsers {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @SerializedName("id")
     private String id;
 
@@ -21,10 +22,18 @@ public class GithubUsers {
 
     @SerializedName("email")
     private String email;
+=======
+    @SerializedName("login")
+    private String login;
+
+    @SerializedName("avatar_url")
+    private String avatar_url;
+>>>>>>> [Chore] Change data to get specific user data
 
     @SerializedName("company")
     private String company;
 
+<<<<<<< HEAD
     @SerializedName("bio")
     private String bio;
 
@@ -43,17 +52,14 @@ public class GithubUsers {
 >>>>>>> [Chore] Add user uid=501(antonynganga) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh) parameter
     public String getName() {
         return name;
+=======
+    public String getLogin() {
+        return login;
+>>>>>>> [Chore] Change data to get specific user data
     }
 
-    public String getEmail() {
-        return email;
+    public String getAvatarUrl() {
+        return avatar_url;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public String getBio() {
-        return bio;
-    }
 }
