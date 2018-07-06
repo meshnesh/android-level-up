@@ -19,8 +19,13 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".view.DetailActivity"
             android:parentActivityName=".view.MainActivity" />
+=======
+            android:name=".DetailActivity"
+            android:parentActivityName=".MainActivity"></activity>
+>>>>>>> [Featre] Add DetailActivity to the manifest file
     </application>
 
 </manifest>
