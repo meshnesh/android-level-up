@@ -1,6 +1,6 @@
 package com.example.antonyng.level_up.service;
 
-import com.example.antonyng.level_up.model.Data;
+import com.example.antonyng.level_up.model.GithubUsersResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -14,10 +14,15 @@ import retrofit2.http.Query;
 
 public interface GithubApi {
 
+<<<<<<< HEAD
     @GET("users?")
 <<<<<<< HEAD
 <<<<<<< HEAD
     Call<Data> getUserList();
+=======
+    @GET("search/users?q=language:Android+location:nairobi                                                                                                                                                                                                                                                  ")
+    Call<GithubUsersResponse> getUserResults();
+>>>>>>> [Chore] Get user based on location and language
 
 =======
     Call<Data> doGetUserList(@Query("page") String page);
