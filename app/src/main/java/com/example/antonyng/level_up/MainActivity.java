@@ -15,12 +15,17 @@ import com.example.antonyng.level_up.model.GithubUsers;
 =======
 >>>>>>> [Chore] Remove unused imports
 
+import com.example.antonyng.level_up.model.GithubUsers;
+
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+=======
+>>>>>>> [Chore] Add public function for listing users from api
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
