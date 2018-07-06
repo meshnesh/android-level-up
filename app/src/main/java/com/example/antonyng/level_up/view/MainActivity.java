@@ -1,37 +1,72 @@
-package com.example.antonyng.level_up.view;
+package com.example.antonyng.level_up;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.example.antonyng.level_up.model.GithubUsers;
-import com.example.antonyng.level_up.R;
 import com.example.antonyng.level_up.presenter.GithubPresenter;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
-
+    //vars
+    private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: Started");
-        mRecyclerView =findViewById(R.id.recycler_view);
-        mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
 
+        initImageBitmaps();
 
         GithubPresenter pres = new GithubPresenter(this);
-        pres.getUserList(mRecyclerView);
+        pres.getUserList();
     }
+
+    private void initImageBitmaps() {
+        Log.d(TAG, "initImageBitmaps: preparing  bitmaps");
+
+        mImageUrls.add("https://avatars2.githubusercontent.com/u/15978054?s=460&v=4");
+        mNames.add("Christopher Kiilu\n@kiiluchris");
+
+        mImageUrls.add("https://avatars1.githubusercontent.com/u/13870224?s=460&v=4");
+        mNames.add("David Kezi\n@Mrkezii");
+
+        mImageUrls.add("https://avatars0.githubusercontent.com/u/33759757?s=460&v=4");
+        mNames.add("@Kalela");
+
+        mImageUrls.add("https://avatars3.githubusercontent.com/u/26790578?s=460&v=4");
+        mNames.add("strongestavenger\n@mutoromike");
+
+        mImageUrls.add("https://avatars2.githubusercontent.com/u/15923109?s=460&v=4");
+        mNames.add("Antony\n@meshnesh");
+
+        mImageUrls.add("https://avatars3.githubusercontent.com/u/30075861?s=460&v=4");
+        mNames.add("betsy\n@betsybeth");
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView() {
+        Log.d(TAG, "initRecyclerView: init recyclerview");
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames, mImageUrls);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager( this));
+    }
+
+    public void usersReady(List<GithubUsers> result) {
+    }
+
+
 }
