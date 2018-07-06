@@ -1,12 +1,16 @@
 package com.example.antonyng.level_up.service;
 
+<<<<<<< HEAD
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+=======
+>>>>>>> [Feature] Create 'GithubService' to handle api base URL && 'GithubUsersApi' to handle HTTP methods
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GithubService {
 
+<<<<<<< HEAD
     private static Retrofit retrofit = null;
     private static final String BASE_URL = "https://api.github.com/";
 
@@ -20,15 +24,28 @@ public class GithubService {
 
     public static GithubApi getAPI() {
 
+=======
+    private Retrofit retrofit = null;
+
+    public GithubUsersApi getAPI() {
+        String BASE_URL = "https://api.github.com/";
+>>>>>>> [Feature] Create 'GithubService' to handle api base URL && 'GithubUsersApi' to handle HTTP methods
 
         if (retrofit == null) {
             retrofit = new Retrofit
                     .Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+<<<<<<< HEAD
                     .client(okHttp.build())
                     .build();
         }
         return retrofit.create(GithubApi.class);
+=======
+                    .build();
+        }
+
+        return retrofit.create(GithubUsersApi.class);
+>>>>>>> [Feature] Create 'GithubService' to handle api base URL && 'GithubUsersApi' to handle HTTP methods
     }
 }
