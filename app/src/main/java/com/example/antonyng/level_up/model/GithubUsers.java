@@ -6,6 +6,7 @@ public class GithubUsers {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @SerializedName("id")
     private String id;
 
@@ -21,6 +22,13 @@ public class GithubUsers {
 
     @SerializedName("email")
     private String email;
+=======
+    @SerializedName("login")
+    private String login;
+
+    @SerializedName("avatar_url")
+    private String avatar_url;
+>>>>>>> [Chore] Change data to get specific user data
 
 <<<<<<< HEAD
     @SerializedName("login")
@@ -34,6 +42,7 @@ public class GithubUsers {
     @SerializedName("company")
     private String company;
 
+<<<<<<< HEAD
     @SerializedName("bio")
     private String bio;
 
@@ -76,4 +85,14 @@ public class GithubUsers {
         return bio;
     }
 >>>>>>> [Feature] Create Model directory to user modela classes
+=======
+    public String getLogin() {
+        return login;
+    }
+
+    public String getAvatarUrl() {
+        return avatar_url;
+    }
+
+>>>>>>> [Chore] Change data to get specific user data
 }
