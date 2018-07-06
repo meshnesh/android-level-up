@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.antonyng.level_up.presenter.GithubPresenter;
 
 public class DetailActivity extends AppCompatActivity {
 

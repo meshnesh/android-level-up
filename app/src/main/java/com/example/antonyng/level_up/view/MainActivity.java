@@ -18,6 +18,7 @@ import com.example.antonyng.level_up.model.GithubUsers;
 >>>>>>> [Test] Testing
 
 import com.example.antonyng.level_up.model.GithubUsers;
+import com.example.antonyng.level_up.presenter.GithubPresenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: Started");
 
         initImageBitmaps();
+
+        GithubPresenter pres = new GithubPresenter(this);
+        pres.getUserList();
     }
 
     private void initImageBitmaps() {
