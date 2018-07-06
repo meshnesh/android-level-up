@@ -1,11 +1,11 @@
 package com.example.antonyng.level_up;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.example.antonyng.level_up.model.GithubUsers;
 =======
 >>>>>>> [Chore] Remove unused imports
+=======
+>>>>>>> [Test] Testing
 
 import com.example.antonyng.level_up.model.GithubUsers;
 
@@ -27,7 +29,6 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 =======
 >>>>>>> [Chore] Add public function for listing users from api
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
