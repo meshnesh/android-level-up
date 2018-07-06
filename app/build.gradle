@@ -38,17 +38,23 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
     // Retrofit and GSON
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
     // Logging
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+<<<<<<< HEAD
 =======
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.0.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
 >>>>>>> [Chore] Add retrofit and gson dependacies
+=======
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
 
     //gson
     implementation 'com.google.code.gson:gson:2.8.0'

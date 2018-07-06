@@ -6,6 +6,7 @@ import java.util.List;
 
 public class GithubUsersResponse {
 <<<<<<< HEAD
+<<<<<<< HEAD
     @SerializedName("items")
     public List<GithubUsers> users;
 
@@ -25,5 +26,12 @@ public class GithubUsersResponse {
     public List<String> getMessages() {
         return messages;
 >>>>>>> [Feature] Create Model directory to user modela classes
+=======
+    @SerializedName("items")
+    public List<GithubUsers> users;
+
+    public List<GithubUsers> getUsers() {
+        return users;
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
     }
 }

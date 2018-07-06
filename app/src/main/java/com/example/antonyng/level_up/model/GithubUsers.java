@@ -7,6 +7,7 @@ public class GithubUsers {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @SerializedName("id")
     private String id;
 
@@ -29,6 +30,13 @@ public class GithubUsers {
     @SerializedName("avatar_url")
     private String avatar_url;
 >>>>>>> [Chore] Change data to get specific user data
+=======
+    @SerializedName("login")
+    private String login;
+
+    @SerializedName("avatar_url")
+    private String avatar_url;
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
 
 <<<<<<< HEAD
     @SerializedName("login")
@@ -42,6 +50,7 @@ public class GithubUsers {
     @SerializedName("company")
     private String company;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     @SerializedName("bio")
     private String bio;
@@ -95,4 +104,14 @@ public class GithubUsers {
     }
 
 >>>>>>> [Chore] Change data to get specific user data
+=======
+    public String getLogin() {
+        return login;
+    }
+
+    public String getAvatarUrl() {
+        return avatar_url;
+    }
+
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
 }

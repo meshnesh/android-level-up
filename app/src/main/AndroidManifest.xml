@@ -20,12 +20,17 @@
         </activity>
         <activity
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:name=".view.DetailActivity"
             android:parentActivityName=".view.MainActivity" />
 =======
             android:name=".DetailActivity"
             android:parentActivityName=".MainActivity"></activity>
 >>>>>>> [Featre] Add DetailActivity to the manifest file
+=======
+            android:name=".view.DetailActivity"
+            android:parentActivityName=".view.MainActivity" />
+>>>>>>> 1940d665a301988893b437557b65e9158558efee
     </application>
 
 </manifest>
