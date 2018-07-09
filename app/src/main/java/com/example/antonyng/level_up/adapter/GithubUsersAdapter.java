@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up;
+package com.example.antonyng.level_up.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,63 +13,66 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.antonyng.level_up.view.DetailActivity;
+import com.example.antonyng.level_up.R;
+import com.example.antonyng.level_up.model.GithubUsers;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private static final String TAG = "RecyclerViewAdapter";
+public class GithubUsersAdapter extends RecyclerView.Adapter<GithubUsersAdapter.ViewHolder> {
 
-    private ArrayList<String> mImageNames;
-    private ArrayList<String> mImage;
+    private static final String TAG = "GithubUsersAdapter";
+
     private Context mcontext;
+    private List<GithubUsers> users;
 
-    public RecyclerViewAdapter(Context mcontext, ArrayList<String> mImageNames, ArrayList<String> mImage) {
-        this.mImageNames = mImageNames;
-        this.mImage = mImage;
+    public GithubUsersAdapter(Context mcontext, List<GithubUsers> users) {
+        this.users = users;
         this.mcontext = mcontext;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public GithubUsersAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_listitem, viewGroup, false);
-        return new ViewHolder(view);
+        return new GithubUsersAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
-        Log.d(TAG, "onBindViewHolder: called");
+    public void onBindViewHolder(@NonNull GithubUsersAdapter.ViewHolder viewHolder, int i) {
+        final GithubUsers githubUser = users.get(i);
 
         Glide.with(mcontext)
                 .asBitmap()
-                .load(mImage.get(i))
+                .load(githubUser.getAvatarUrl())
                 .into(viewHolder.image);
 
-        viewHolder.imageName.setText(mImageNames.get(i));
+        viewHolder.imageName.setText(githubUser.getLogin());
 
         viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "onClick: clicked on:" + mImageNames.get(i));
+                Log.d(TAG, "onClick: clicked on:" + githubUser.getLogin());
 
-                Toast.makeText(mcontext, mImageNames.get(i), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mcontext, githubUser.getLogin(), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(mcontext, DetailActivity.class);
-                intent.putExtra("image_url", mImage.get(i));
-                intent.putExtra("dev_name", mImageNames.get(i));
+                intent.putExtra("image_url", githubUser.getAvatarUrl());
+                intent.putExtra("dev_name", githubUser.getLogin());
                 mcontext.startActivity(intent);
             }
         });
+
     }
 
     @Override
     public int getItemCount() {
-        return mImageNames.size();
+        return users.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
         CircleImageView image;
         TextView imageName;

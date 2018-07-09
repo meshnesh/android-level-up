@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up;
+package com.example.antonyng.level_up.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.antonyng.level_up.R;
+import com.example.antonyng.level_up.presenter.GithubPresenter;
 
 public class DetailActivity extends AppCompatActivity {
 
