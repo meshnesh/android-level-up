@@ -1,6 +1,4 @@
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+.idea
 .DS_Store
 .externalNativeBuild
 
