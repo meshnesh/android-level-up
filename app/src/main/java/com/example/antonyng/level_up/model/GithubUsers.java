@@ -7,35 +7,22 @@ public class GithubUsers {
     @SerializedName("id")
     private String id;
 
-    @SerializedName("name")
-    private String name;
+    @SerializedName("login")
+    private String login;
 
-    @SerializedName("email")
-    private String email;
-
-    @SerializedName("company")
-    private String company;
-
-    @SerializedName("bio")
-    private String bio;
+    @SerializedName("avatar_url")
+    private String avatar_url;
 
     public String getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAvatarUrl() {
+        return avatar_url;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public String getBio() {
-        return bio;
-    }
 }

@@ -1,6 +1,4 @@
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+.idea
 .DS_Store
 .externalNativeBuild
 
@@ -71,3 +69,5 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
+.idea/instapk.xml
+instapk.log*
