@@ -1,4 +1,3 @@
-
 package com.example.antonyng.level_up.view;
 
 import android.support.v7.app.AppCompatActivity;
