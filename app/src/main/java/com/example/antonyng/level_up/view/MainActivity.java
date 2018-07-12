@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements GithubPresenter.View {
 
-    static final  String ALL_KEYS = "list_state";
     ArrayList<GithubUsers> users;
+
     private final GithubPresenter presenter = new GithubPresenter(this);
 
     private static final String TAG = "MainActivity";
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements GithubPresenter.V
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    static final  String USERS_LIST = "list_state";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements GithubPresenter.V
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState != null) {
-            users = savedInstanceState.getParcelableArrayList(ALL_KEYS);
+            users = savedInstanceState.getParcelableArrayList(USERS_LIST);
             displayGithubUsers(users);
         } else presenter.getUserList();
     }
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements GithubPresenter.V
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putParcelableArrayList(ALL_KEYS,(ArrayList<? extends Parcelable>) users);
+
+        savedInstanceState.putParcelableArrayList(USERS_LIST, users);
     }
 
     @Override
