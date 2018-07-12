@@ -17,6 +17,7 @@ import com.example.antonyng.level_up.view.DetailActivity;
 import com.example.antonyng.level_up.R;
 import com.example.antonyng.level_up.model.GithubUsers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -26,11 +27,16 @@ public class GithubUsersAdapter extends RecyclerView.Adapter<GithubUsersAdapter.
     private static final String TAG = "GithubUsersAdapter";
 
     private Context mcontext;
-    private List<GithubUsers> users;
+    private ArrayList<GithubUsers> users;
 
-    public GithubUsersAdapter(Context mcontext, List<GithubUsers> users) {
+    public GithubUsersAdapter(Context mcontext, ArrayList<GithubUsers> users) {
         this.users = users;
         this.mcontext = mcontext;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
     }
 
     @NonNull
