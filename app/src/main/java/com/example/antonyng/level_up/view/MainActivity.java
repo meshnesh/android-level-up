@@ -1,6 +1,5 @@
 package com.example.antonyng.level_up.view;
 
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,17 +8,21 @@ import android.util.Log;
 
 import com.example.antonyng.level_up.R;
 import com.example.antonyng.level_up.adapter.GithubUsersAdapter;
+import com.example.antonyng.level_up.contract.MainContract;
 import com.example.antonyng.level_up.model.GithubUsers;
 import com.example.antonyng.level_up.presenter.GithubPresenter;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements GithubPresenter.View {
+public class MainActivity extends AppCompatActivity implements MainContract.MainView {
 
     ArrayList<GithubUsers> users;
 
-    private final GithubPresenter presenter = new GithubPresenter(this);
+    /**
+     * The Github presenter.
+     */
+    MainContract.MainPresenter presenter = new GithubPresenter(this);
 
     private static final String TAG = "MainActivity";
 
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements GithubPresenter.V
     private RecyclerView.LayoutManager mLayoutManager;
 
     static final  String USERS_LIST = "list_state";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,4 +62,5 @@ public class MainActivity extends AppCompatActivity implements GithubPresenter.V
         RecyclerView.Adapter adapter = new GithubUsersAdapter(this, users);
         mRecyclerView.setAdapter(adapter);
     }
+
 }
