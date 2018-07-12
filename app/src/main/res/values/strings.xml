@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">level-up</string>
+    <string name="share_details">Share Profile</string>
+    <string name="share_part_message">Check out this developer @</string>
+    <string name="share_intent_type">text/plain</string>
 </resources>
