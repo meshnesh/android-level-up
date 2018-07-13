@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#333">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -25,4 +26,21 @@
         android:textColor="#fff"
         android:textSize="56sp"
         android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/github_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:autoLink="web"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="18sp"
+        tools:text="menshesh"
+        android:layout_below="@+id/UserNameLocation"/>
 </RelativeLayout>

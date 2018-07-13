@@ -1,34 +1,27 @@
 package com.example.antonyng.level_up.presenter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
-import com.example.antonyng.level_up.adapter.GithubUsersAdapter;
+import com.example.antonyng.level_up.contract.MainContract;
 import com.example.antonyng.level_up.model.GithubUsers;
 import com.example.antonyng.level_up.model.GithubUsersResponse;
 import com.example.antonyng.level_up.service.GithubService;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class GithubPresenter {
+public final class GithubPresenter implements MainContract.MainPresenter {
 
-    View view;
+    MainContract.MainView view;
 
     private Context context;
 
 
-    public GithubPresenter(View view) {
+    public GithubPresenter(MainContract.MainView view) {
         this.view = view;
-    }
-
-    public interface View {
-        void displayGithubUsers(ArrayList<GithubUsers> users);
     }
 
     public void getUserList() {
