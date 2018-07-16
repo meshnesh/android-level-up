@@ -35,6 +35,8 @@ public final class GithubPresenter implements MainContract.MainPresenter {
                 }
             }
 
+            //This si where the test branch is checked for properly.
+
             @Override
             public void onFailure(Call<GithubUsersResponse> call, Throwable t) {
                 try {
