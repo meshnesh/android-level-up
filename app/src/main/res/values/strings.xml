@@ -3,4 +3,9 @@
     <string name="share_details">Share Profile</string>
     <string name="share_part_message">Check out this developer @</string>
     <string name="share_intent_type">text/plain</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">Nairobi Java developers</string>
+    <string name="backdrop_subtitle">Android</string>
 </resources>
