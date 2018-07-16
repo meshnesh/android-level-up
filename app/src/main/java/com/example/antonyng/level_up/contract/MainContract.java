@@ -16,6 +16,8 @@ public interface MainContract {
          * @param githubUsers the github users
          */
         void displayGithubUsers(ArrayList<GithubUsers> usersList);
+
+        void dismissDialog(String fetchStatus);
     }
 
     /**

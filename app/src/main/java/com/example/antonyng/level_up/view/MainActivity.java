@@ -1,18 +1,15 @@
 package com.example.antonyng.level_up.view;
 
-import android.content.res.Resources;
-import android.graphics.Rect;
+import android.app.ProgressDialog;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.antonyng.level_up.R;
 import com.example.antonyng.level_up.adapter.GithubUsersAdapter;
@@ -37,6 +34,15 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    private SwipeRefreshLayout swipeRefreshLayout;
+
+
+    /**
+     * The Progress dialog.
+     */
+    ProgressDialog progressDialog;
+    ProgressBar progressBar;
+
     static final  String USERS_LIST = "list_state";
 
 
@@ -45,10 +51,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        swipeRefreshLayout = findViewById(R.id.swipe_container);
+
         if (savedInstanceState != null) {
             users = savedInstanceState.getParcelableArrayList(USERS_LIST);
             displayGithubUsers(users);
         } else presenter.getUserList();
+        setSwipeRefreshLayout();
     }
 
     @Override
@@ -62,12 +71,62 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
     public void displayGithubUsers(ArrayList<GithubUsers> usersList) {
         users = usersList;
 
-        Log.d(TAG, "onCreate: Started");
         mRecyclerView =findViewById(R.id.recycler_view);
         mLayoutManager = new GridLayoutManager(this, 2);
         mRecyclerView.setLayoutManager(mLayoutManager);
         RecyclerView.Adapter adapter = new GithubUsersAdapter(this, users);
         mRecyclerView.setAdapter(adapter);
+
+        dismissDialog("success");
+    }
+
+    /**
+     * Dismisses/closes any running dialogs (progress dialog or swipeRefresh) after api queries
+     * Also displays toast message or snack bar depending on 'success' or 'failure' of api queries
+     *
+     */
+    @Override
+    public void dismissDialog(String fetchStatus) {
+
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+
+        if (swipeRefreshLayout.isRefreshing()) {
+            if ("success".equalsIgnoreCase(fetchStatus)) {
+                swipeRefreshLayout.setRefreshing(false);
+                Toast.makeText(this, "list refreshed",
+                        Toast.LENGTH_LONG).show();
+            } else {
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        }
+    }
+
+
+    /**
+     * Initializes the SwipeRefreshLayout and sets an onRefresh listener
+     */
+    private void setSwipeRefreshLayout() {
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                queryApi();
+            }
+        });
+    }
+
+    /**
+     * Queries github api for list of java developers
+     **/
+    public void queryApi() {
+        String title = String.format("java developers");
+            progressDialog = ProgressDialog.show(this, title,
+                    "Loading... Please wait!!!", false, false);
+        presenter.getUserList();
     }
 
     /**
