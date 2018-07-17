@@ -1,38 +1,40 @@
-# Level Up Android Application
+# Level Up Application
 [![CircleCI](https://circleci.com/gh/meshnesh/android-level-up/tree/ft-layout-recyclerview-155738443.svg?style=svg)](https://circleci.com/gh/meshnesh/android-level-up/tree/ft-layout-recyclerview-155738443)
 
-The Level Up Android app.
+The Level Up Android app is an application built with the core essence of consuming GitHub's API to access java developers in Nairobi. It is built using Java Android.
 
-## Project Setup
+## Getting Started
 
 This project is built with Gradle, the [Android Gradle plugin](http://tools.android.com/tech-docs/new-build-system/user-guide). Follow the steps below to set up the project locally.
 
+* Install `Java JDK`, `version 8` or greater
+
+
 * Clone [android-level-up](https://github.com/meshnesh/android-level-up.git) inside your working folder.
+
 * Start Android Studio
 * Select "Open Project" and select the generated root Project folder.
 * Once the project has compiled -> run the project!
+    ```
+    from the android main menu, click on 'Run' tab, and click on 'Run MainActivity'
+    connect your android mobile phone or simple use an inbuilt android emulator
+    ```
+## Running Test
 
-## Running the application on an emulator or actual device
+* Run
+    > $ ./gradlew test
 
-There can be many ways of running your application in Android Studio.
-* First off, lets check out running on an emulator
-    * We shall start by installing the emulator into your android studio.
+## Built With
 
-    Installing the Android SDK manager is the first step. Follow these steps to install the system image.
+* [Android Tools](https://developer.android.com/) - Used to develop mobile, watch and T.V applications
 
-     1. Select `Tools` in the task bar.
-     2. Go to `SDK manager`.
-     3. Select the Android version. (Android 8.1 Oreo /API Level 27 or later).
-     4. Click install.
+## Contributing
 
-    * We shall then proceed to run the emulator:
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
-        1. Open the project in your android studio.
-        2. click the run button in android studio.
-        3. Proceed to `create new virtual device`.
-        4. Select the category below:
-            - `Tablet`
-        5. Proceed to the type of tablet to use and click next.
-        6. Select the latest version and the preferred API version `27 or later`.
-        7. Click finish.
-        8. Now when you click run, you will be able to select the device chosen and proceed to view your work on the emulator
+## Authors
+
+Antony Munene.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
