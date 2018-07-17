@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up.view;
+package com.example.antonyng.level_up.github_user_profile.view;
 
 import android.content.Intent;
 import android.support.v4.app.ShareCompat;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.antonyng.level_up.R;
-import com.example.antonyng.level_up.presenter.GithubPresenter;
 
 public class DetailActivity extends AppCompatActivity {
 

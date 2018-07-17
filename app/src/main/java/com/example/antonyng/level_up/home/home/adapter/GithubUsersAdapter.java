@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up.adapter;
+package com.example.antonyng.level_up.home.home.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,19 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.antonyng.level_up.view.DetailActivity;
+import com.example.antonyng.level_up.github_user_profile.view.DetailActivity;
 import com.example.antonyng.level_up.R;
-import com.example.antonyng.level_up.model.GithubUsers;
+import com.example.antonyng.level_up.home.home.model.GithubUsers;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class GithubUsersAdapter extends RecyclerView.Adapter<GithubUsersAdapter.ViewHolder> {
 

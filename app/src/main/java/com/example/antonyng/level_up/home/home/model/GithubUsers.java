@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up.model;
+package com.example.antonyng.level_up.home.home.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up.view;
+package com.example.antonyng.level_up.home.home.view;
 
 import android.app.ProgressDialog;
 import android.support.design.widget.AppBarLayout;
@@ -12,10 +12,10 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.antonyng.level_up.R;
-import com.example.antonyng.level_up.adapter.GithubUsersAdapter;
-import com.example.antonyng.level_up.contract.MainContract;
-import com.example.antonyng.level_up.model.GithubUsers;
-import com.example.antonyng.level_up.presenter.GithubPresenter;
+import com.example.antonyng.level_up.home.home.adapter.GithubUsersAdapter;
+import com.example.antonyng.level_up.home.home.contract.MainContract;
+import com.example.antonyng.level_up.home.home.model.GithubUsers;
+import com.example.antonyng.level_up.home.home.presenter.GithubPresenter;
 
 import java.util.ArrayList;
 
