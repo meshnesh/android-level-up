@@ -25,3 +25,21 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ ext {
+
+     constraintLayout = "1.1.2"
+     support = "28.0.0-alpha3"
+     espresso = "3.0.2"
+     junit= "4.12"
+     recyclerView = "28.0.0-alpha3"
+     design = "27.1.1"
+     glide = "4.7.1"
+     circleimageview = "2.2.0"
+     retrofit = "2.3.0"
+     converterGson = "2.3.0"
+     loggingInterceptor = "3.9.0"
+     gson = "2.8.0"
+     cardView = "28.0.0-alpha1"
+     testRunner= "1.0.2"
+ }
