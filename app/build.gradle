@@ -52,4 +52,7 @@ dependencies {
 
     //card view
     implementation "com.android.support:cardview-v7:${rootProject.cardView}"
+
+    //Flow layout
+    implementation "org.apmem.tools:layouts:${rootProject.flowLayout}"
 }

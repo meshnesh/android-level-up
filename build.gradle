@@ -42,4 +42,5 @@ task clean(type: Delete) {
      gson = "2.8.0"
      cardView = "28.0.0-alpha1"
      testRunner= "1.0.2"
+     flowLayout = "1.10@aar"
  }
