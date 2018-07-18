@@ -8,12 +8,12 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profilePlaceholder"
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/profile"
         android:visibility="visible"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/UserNameLocation"
