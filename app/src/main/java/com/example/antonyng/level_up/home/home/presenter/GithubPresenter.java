@@ -1,11 +1,11 @@
-package com.example.antonyng.level_up.presenter;
+package com.example.antonyng.level_up.home.home.presenter;
 
 import android.content.Context;
 
-import com.example.antonyng.level_up.contract.MainContract;
-import com.example.antonyng.level_up.model.GithubUsers;
-import com.example.antonyng.level_up.model.GithubUsersResponse;
-import com.example.antonyng.level_up.service.GithubService;
+import com.example.antonyng.level_up.home.home.contract.MainContract;
+import com.example.antonyng.level_up.home.home.model.GithubUsers;
+import com.example.antonyng.level_up.home.home.model.GithubUsersResponse;
+import com.example.antonyng.level_up.home.home.service.GithubService;
 
 import java.util.ArrayList;
 

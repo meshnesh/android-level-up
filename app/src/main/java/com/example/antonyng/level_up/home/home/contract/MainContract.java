@@ -1,6 +1,6 @@
-package com.example.antonyng.level_up.contract;
+package com.example.antonyng.level_up.home.home.contract;
 
-import com.example.antonyng.level_up.model.GithubUsers;
+import com.example.antonyng.level_up.home.home.model.GithubUsers;
 
 import java.util.ArrayList;
 
@@ -16,6 +16,8 @@ public interface MainContract {
          * @param githubUsers the github users
          */
         void displayGithubUsers(ArrayList<GithubUsers> usersList);
+
+        void dismissDialog(String fetchStatus);
     }
 
     /**

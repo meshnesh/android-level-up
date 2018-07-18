@@ -1,4 +1,4 @@
-package com.example.antonyng.level_up.model;
+package com.example.antonyng.level_up.home.home.model;
 
 import com.google.gson.annotations.SerializedName;
 
