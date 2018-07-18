@@ -1,5 +1,7 @@
 package com.example.antonyng.level_up.home.home.contract;
 
+import android.content.Context;
+
 import com.example.antonyng.level_up.home.home.model.GithubUsers;
 
 import java.util.ArrayList;
@@ -18,6 +20,20 @@ public interface MainContract {
         void displayGithubUsers(ArrayList<GithubUsers> usersList);
 
         void dismissDialog(String fetchStatus);
+
+        /**
+         * Display snack bar.
+         *
+         * @param networkStatus the network status
+         */
+        void displaySnackBar(boolean networkStatus);
+
+        /**
+         * Gets context.
+         *
+         * @return the context
+         */
+        Context getViewContext();
     }
 
     /**
@@ -29,5 +45,12 @@ public interface MainContract {
          *
          */
         void getUserList();
+
+        /**
+         * Gets network state.
+         *
+         * @return the network state
+         */
+        boolean getNetworkConnectionState();
     }
 }

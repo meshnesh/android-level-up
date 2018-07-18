@@ -6,6 +6,7 @@ import com.example.antonyng.level_up.home.home.contract.MainContract;
 import com.example.antonyng.level_up.home.home.model.GithubUsers;
 import com.example.antonyng.level_up.home.home.model.GithubUsersResponse;
 import com.example.antonyng.level_up.home.home.service.GithubService;
+import com.example.antonyng.level_up.home.home.util.NetworkConnection;
 
 import java.util.ArrayList;
 
@@ -26,23 +27,35 @@ public final class GithubPresenter implements MainContract.MainPresenter {
 
     public void getUserList() {
 
-        GithubService.getAPI().getUserResults().enqueue(new Callback<GithubUsersResponse>() {
-            @Override
-            public void onResponse(Call<GithubUsersResponse> call, Response<GithubUsersResponse> response) {
-                ArrayList<GithubUsers> users = response.body().getUsers();
-                if (users != null) {
-                    view.displayGithubUsers(users);
-                }
-            }
+        GithubService
+                .getAPI()
+                .getUserResults()
+                .enqueue(new Callback<GithubUsersResponse>() {
+                    @Override
+                    public void onResponse(Call<GithubUsersResponse> call,
+                                           Response<GithubUsersResponse> response) {
 
-            @Override
-            public void onFailure(Call<GithubUsersResponse> call, Throwable t) {
-                try {
-                    throw new InterruptedException("Something went wrong!");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+                        ArrayList<GithubUsers> users = response.body().getUsers();
+                        if (users != null) {
+                            view.displayGithubUsers(users);
+                        } else view.displaySnackBar(true);
+                    }
+
+                    @Override
+                    public void onFailure(Call<GithubUsersResponse> call,
+                                          Throwable t) {
+                        view.displaySnackBar(false);
+                    }
+                });
     }
+
+    /**
+     * Gets network state.
+     *
+     * @return the network state
+     */
+    public boolean getNetworkConnectionState() {
+        return NetworkConnection.getConnectionStatus(view.getViewContext());
+    }
+
 }
