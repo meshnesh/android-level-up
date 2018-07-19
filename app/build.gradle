@@ -55,4 +55,11 @@ dependencies {
 
     //Flow layout
     implementation "org.apmem.tools:layouts:${rootProject.flowLayout}"
+
+    // Dependencies for local unit tests
+    testImplementation "junit:junit:$rootProject.ext.junit"
+    testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+    testImplementation "org.powermock:powermock-module-junit4:$rootProject.ext.powerMockito"
+    testImplementation "org.powermock:powermock-api-mockito:$rootProject.ext.powerMockito"
 }
