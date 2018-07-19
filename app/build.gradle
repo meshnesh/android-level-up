@@ -11,6 +11,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -29,6 +32,7 @@ dependencies {
     testImplementation "junit:junit:${rootProject.junit}"
     androidTestImplementation "com.android.support.test:runner:${rootProject.testRunner}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.espresso}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:${rootProject.espressoIntents}"
     implementation "com.android.support:recyclerview-v7:${rootProject.recyclerView}"
     //noinspection GradleCompatible
     implementation "com.android.support:design:${rootProject.design}"

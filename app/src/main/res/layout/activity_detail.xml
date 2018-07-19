@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#333">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -41,6 +40,6 @@
         android:textColor="@color/colorPrimary"
         android:textColorLink="@color/colorPrimary"
         android:textSize="18sp"
-        tools:text="menshesh"
+        android:text="http://github.io/menshesh"
         android:layout_below="@+id/UserNameLocation"/>
 </RelativeLayout>

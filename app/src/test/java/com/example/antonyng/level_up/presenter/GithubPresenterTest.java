@@ -1,6 +1,7 @@
-package com.example.antonyng.level_up.home.home.presenter;
+package com.example.antonyng.level_up.presenter;
 
 import com.example.antonyng.level_up.home.home.contract.MainContract;
+import com.example.antonyng.level_up.home.home.presenter.GithubPresenter;
 
 import org.junit.Before;
 import org.junit.Test;

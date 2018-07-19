@@ -19,6 +19,12 @@ public class GithubUsers implements Parcelable {
     @SerializedName("html_url")
     private String html_url;
 
+    public GithubUsers(String avatar_url, String login, String html_url) {
+        this.avatar_url = avatar_url;
+        this.login = login;
+        this.html_url = html_url;
+    }
+
     protected GithubUsers(Parcel in) {
         login = in.readString();
         avatar_url = in.readString();
