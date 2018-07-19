@@ -1,14 +1,19 @@
 package com.example.antonyng.level_up.home.home.view;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.graphics.Color;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.antonyng.level_up.R;
@@ -41,7 +46,8 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
      * The Progress dialog.
      */
     ProgressDialog progressDialog;
-    ProgressBar progressBar;
+
+    Snackbar snackbar;
 
     static final  String USERS_LIST = "list_state";
 
@@ -56,7 +62,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
         if (savedInstanceState != null) {
             users = savedInstanceState.getParcelableArrayList(USERS_LIST);
             displayGithubUsers(users);
-        } else presenter.getUserList();
+        } else {
+            if (presenter.getNetworkConnectionState()) {
+                presenter.getUserList();
+            } else {
+                displaySnackBar(false);
+            }
+        }
         setSwipeRefreshLayout();
     }
 
@@ -101,6 +113,50 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
                 swipeRefreshLayout.setRefreshing(false);
             }
         }
+    }
+
+
+    /**
+     * Display snack bar.
+     */
+    @Override
+    public void displaySnackBar(boolean networkStatus) {
+        int status = R.string.no_connection;
+
+        if (networkStatus) {
+            status = R.string.fetch_failed;
+        }
+        Snackbar snackbar = Snackbar
+                .make(swipeRefreshLayout, status, Snackbar.LENGTH_INDEFINITE)
+                .setAction("Try Again", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        hideSnackBar();
+                        presenter.getUserList();
+                    }
+                });
+
+        // Change text color for action button
+        snackbar.setActionTextColor(Color.CYAN);
+
+        // Change snack bar message text color
+        View sbView = snackbar.getView();
+        TextView textView = sbView.findViewById(android.support.design.R.id.snackbar_text);
+        textView.setTextColor(Color.WHITE);
+
+        snackbar.show();
+    }
+
+    /**
+     * Hide snack bar.
+     */
+    public void hideSnackBar() {
+        snackbar.dismiss();
+    }
+
+    @Override
+    public Context getViewContext() {
+        return getApplicationContext();
     }
 
 

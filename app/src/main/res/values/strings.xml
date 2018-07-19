@@ -8,4 +8,6 @@
     <string name="action_play_next">Play Next</string>
     <string name="backdrop_title">Nairobi Java developers</string>
     <string name="backdrop_subtitle">Android</string>
+    <string name="no_connection">No internet connection</string>
+    <string name="fetch_failed">Bad internet Connection</string>
 </resources>
