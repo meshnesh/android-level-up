@@ -24,6 +24,10 @@ This project is built with Gradle, the [Android Gradle plugin](http://tools.andr
 * Run
     > $ ./gradlew test
 
+## Out put of Test Run
+
+  ![test-coverage](https://github.com/meshnesh/android-level-up/blob/ft-unit-test-156185242/testImage/Screen%20Shot%202018-07-23%20at%2015.16.48.png)
+
 ## Built With
 
 * [Android Tools](https://developer.android.com/) - Used to develop mobile, watch and T.V applications
