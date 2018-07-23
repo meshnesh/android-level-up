@@ -49,11 +49,18 @@ public class DetailActivity extends AppCompatActivity {
      * @return - share intent
      */
     private Intent profileShareIntent() {
-        String devName = getIntent().getStringExtra("dev_name");
-        String profileLink = getIntent().getStringExtra("html_url");
+        String devName = getIntent()
+                .getStringExtra("dev_name");
+
+        String profileLink = getIntent()
+                .getStringExtra("html_url");
+
         StringBuilder profileInfo = new StringBuilder();
-        profileInfo.append(getString(R.string.share_part_message))
-                .append(devName).append(", ").append(profileLink);
+        profileInfo
+                .append(getString(R.string.share_part_message))
+                .append(devName)
+                .append(", ")
+                .append(profileLink);
 
         return ShareCompat.IntentBuilder.from(this)
                 .setType(getString(R.string.share_intent_type))
