@@ -1,5 +1,5 @@
 # Level Up Application
-[![CircleCI](https://circleci.com/gh/meshnesh/android-level-up/tree/ft-layout-recyclerview-155738443.svg?style=svg)](https://circleci.com/gh/meshnesh/android-level-up/tree/ft-layout-recyclerview-155738443) [![Maintainability](https://api.codeclimate.com/v1/badges/afd94db762b4f42a2c67/maintainability)](https://codeclimate.com/github/meshnesh/android-level-up/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/afd94db762b4f42a2c67/test_coverage)](https://codeclimate.com/github/meshnesh/android-level-up/test_coverage)
+[![CircleCI](https://circleci.com/gh/meshnesh/android-level-up/tree/develop.svg?style=svg)](https://circleci.com/gh/meshnesh/android-level-up/tree/develop) [![Maintainability](https://api.codeclimate.com/v1/badges/afd94db762b4f42a2c67/maintainability)](https://codeclimate.com/github/meshnesh/android-level-up/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/afd94db762b4f42a2c67/test_coverage)](https://codeclimate.com/github/meshnesh/android-level-up/test_coverage)
 
 The Level Up Android app is an application built with the core essence of consuming GitHub's API to access java developers in Nairobi. It is built using Java Android.
 
